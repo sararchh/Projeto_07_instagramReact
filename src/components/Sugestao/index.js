@@ -35,23 +35,23 @@ const arraySugestao = [
 
 export function Sugestao() {
   return (
-    <div class="sugestoes">
-      <div class="titulo">
+    <div className="sugestoes">
+      <div className="titulo">
         Sugestões para você
         <div>Ver tudo</div>
       </div>
 
       {arraySugestao.map((item) => (
-        <div class="sugestao">
-          <div class="usuario">
-            <img src={item.img} />
-            <div class="texto">
-              <div class="nome">{item.name}</div>
-              <div class="razao">{item.reason}</div>
+        <div className="sugestao" key={item.id}>
+          <div className="usuario">
+            <img src={item.img} alt='imagem usuario'/>
+            <div className="texto">
+              <div className="nome">{item.name}</div>
+              <div className="razao">{item.reason}</div>
             </div>
           </div>
 
-          <div class="seguir">Seguir</div>
+          <div className="seguir">Seguir</div>
         </div>
       ))}
 

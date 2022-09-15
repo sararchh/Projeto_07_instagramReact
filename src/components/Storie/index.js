@@ -48,18 +48,18 @@ export function Storie() {
     <>
 
       {arrayUser.map((user) => (
-        <div class="story" key={user.id}>
-          <div class="imagem">
-            <img src={user.img} />
+        <div className="story" key={user.id}>
+          <div className="imagem">
+            <img src={user.img} alt='imagem user'/>
           </div>
-          <div class="usuario">
+          <div className="usuario">
             {user.name}
           </div>
         </div>
       ))}
 
 
-      <div class="setinha">
+      <div className="setinha">
         <ion-icon name="chevron-forward-circle"></ion-icon>
       </div>
     </>

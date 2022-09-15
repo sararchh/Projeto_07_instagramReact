@@ -24,23 +24,23 @@ export function Post() {
     <>
 
     {arrayPost.map((post) => (
-       <div class="post" key={post.id}>
-       <div class="topo">
-         <div class="usuario">
-           <img src={post.img} />
+       <div className="post" key={post.id}>
+       <div className="topo">
+         <div className="usuario">
+           <img src={post.img} alt='imagem post'/>
            {post.name}
          </div>
-         <div class="acoes">
+         <div className="acoes">
            <ion-icon name="ellipsis-horizontal"></ion-icon>
          </div>
        </div>
 
-       <div class="conteudo">
-         <img src={post.content} />
+       <div className="conteudo">
+         <img src={post.content} alt='imagem do conteudo'/>
        </div>
 
-       <div class="fundo">
-         <div class="acoes">
+       <div className="fundo">
+         <div className="acoes">
            <div>
              <ion-icon name="heart-outline"></ion-icon>
              <ion-icon name="chatbubble-outline"></ion-icon>
@@ -51,9 +51,9 @@ export function Post() {
            </div>
          </div>
 
-         <div class="curtidas">
-           <img src={post.imgLike} />
-           <div class="texto">
+         <div className="curtidas">
+           <img src={post.imgLike} alt='imagem like'/>
+           <div className="texto">
              Curtido por <strong>adorable_animals</strong> e <strong>outras {post.like} pessoas</strong>
            </div>
          </div>

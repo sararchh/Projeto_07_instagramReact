@@ -5,13 +5,13 @@ import { Storie } from '../Storie';
 
 export function Corpo() {
   return (
-    <div class="corpo">
-      <div class="esquerda">
-        <div class="stories">
+    <div className="corpo">
+      <div className="esquerda">
+        <div className="stories">
           <Storie />
         </div>
 
-        <div class="posts">
+        <div className="posts">
           <Post />
         </div>
       </div>
