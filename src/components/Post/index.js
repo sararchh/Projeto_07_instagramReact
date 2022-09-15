@@ -8,6 +8,7 @@ const arrayPost = [
     content: "assets/img/gato-telefone.svg",
     imgLike: "assets/img/respondeai.svg",
     savePost: false,
+    likePost: false,
     like: 0,
   },
   {
@@ -17,6 +18,7 @@ const arrayPost = [
     content: "assets/img/dog.svg",
     imgLike: "assets/img/adorable_animals.svg",
     savePost: false,
+    likePost: false,
     like: 0,
   },
 ]
@@ -30,6 +32,14 @@ export function Post() {
     const selected = newArray.findIndex((i) => i.id === post.id);
 
     newArray[selected] = { ...newArray[selected], savePost: !newArray[selected].savePost }
+    setPostList(newArray);
+  }
+
+  const handleLikePost = (post) => {
+    let newArray = [...postList];
+    const selected = newArray.findIndex((i) => i.id === post.id);
+
+    newArray[selected] = { ...newArray[selected], likePost: !newArray[selected].likePost }
     setPostList(newArray);
   }
 
@@ -55,7 +65,13 @@ export function Post() {
           <div className="fundo">
             <div className="acoes">
               <div>
-                <ion-icon name="heart-outline"></ion-icon>
+                <button onClick={() => handleLikePost(post)}>
+                  {post.likePost ?
+                    <ion-icon name="heart-sharp" style={{ color: 'red' }}></ion-icon>
+                    :
+                    <ion-icon name="heart-outline" ></ion-icon>
+                  }
+                </button>
                 <ion-icon name="chatbubble-outline"></ion-icon>
                 <ion-icon name="paper-plane-outline"></ion-icon>
               </div>
