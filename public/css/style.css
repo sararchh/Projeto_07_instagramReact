@@ -105,6 +105,10 @@ body {
   scroll-behavior: smooth;
 }
 
+.stories::-webkit-scrollbar  {
+  display: none;
+}
+
 .story {
   display: flex;
   height: 100%;
