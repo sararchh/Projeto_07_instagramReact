@@ -27,19 +27,26 @@ export function Post() {
 
   const [postList, setPostList] = React.useState(arrayPost);
 
+  const handleLikePost = (post) => {
+    let newArray = [...postList];
+    const selected = newArray.findIndex((i) => i.id === post.id);
+
+    newArray[selected] = { ...newArray[selected], likePost: !newArray[selected].likePost}
+
+    if (newArray[selected].likePost) {
+      newArray[selected].like += 1;
+    } else {
+      newArray[selected].like -= 1;
+    }
+
+    setPostList(newArray);
+  }
+
   const handleSavePost = (post) => {
     let newArray = [...postList];
     const selected = newArray.findIndex((i) => i.id === post.id);
 
     newArray[selected] = { ...newArray[selected], savePost: !newArray[selected].savePost }
-    setPostList(newArray);
-  }
-
-  const handleLikePost = (post) => {
-    let newArray = [...postList];
-    const selected = newArray.findIndex((i) => i.id === post.id);
-
-    newArray[selected] = { ...newArray[selected], likePost: !newArray[selected].likePost }
     setPostList(newArray);
   }
 
