@@ -18,7 +18,7 @@ export function User() {
     <div className="usuario">
       <img onClick={handleEditImage} src={!imageUser ? 'assets/img/catanacomics.svg' : imageUser} alt='imagem do usuario' />
       <div className="texto">
-        <strong>catanacomics</strong>
+        <strong>{!name ? 'Visitante' : name}</strong>
         <span>
           {!name ? 'Visitante' : name}
           <ion-icon name="pencil" onClick={handleEditName} ></ion-icon>
