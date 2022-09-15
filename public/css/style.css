@@ -98,8 +98,11 @@ body {
   border-radius: 3px;
   border: 1px solid #DBDBDB;
   padding: 0 18px;
-  overflow: hidden;
+  overflow: scroll;
+  overflow-y: auto;
   position: relative;
+
+  scroll-behavior: smooth;
 }
 
 .story {
@@ -112,6 +115,8 @@ body {
   font-size: 12px;
   cursor: pointer;
   margin-right: 10px;
+
+
 }
 
 .story .imagem {
@@ -139,7 +144,7 @@ body {
 }
 
 .stories .setinha {
-  position: absolute;
+  position: sticky;
   right: 10px;
   top: 45px;
   height: 32px;
