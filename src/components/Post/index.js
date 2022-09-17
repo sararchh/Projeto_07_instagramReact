@@ -54,7 +54,7 @@ export function Post() {
     <>
 
       {postList.map((post) => (
-        <div className="post" key={post.id}>
+        <div className="post" key={post.id} >
           <div className="topo">
             <div className="usuario">
               <img src={post.img} alt='imagem post' />
@@ -65,7 +65,7 @@ export function Post() {
             </div>
           </div>
 
-          <div className="conteudo">
+          <div className="conteudo" onClick={() => handleLikePost(post)}>
             <img src={post.content} alt='imagem do conteudo' />
           </div>
 
